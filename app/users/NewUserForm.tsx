@@ -9,9 +9,9 @@ function NewUserForm() {
             <form action="" className='flex flex-col gap-5'>
                 <h1 className='font-extrabold'>User Registeration</h1>
                 <Label>Your Name</Label>
-                <Input type='text' name='name' />
+                <Input required type='text' name='name' />
                 <Label>Your Email</Label>
-                <Input type='email' name='email' />
+                <Input required type='email' name='email' />
                 <Button>Submit</Button>
             </form>
         </>
