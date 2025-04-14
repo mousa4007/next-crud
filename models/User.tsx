@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { unique } from "next/dist/build/utils";
 
 const userSchema = new mongoose.Schema(
   {
@@ -13,7 +12,6 @@ const userSchema = new mongoose.Schema(
     },
     email: {
       type: String,
-      default: "anonymous",
       required: true,
       unique: true,
       trim: true,
@@ -24,6 +22,6 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const userModel = mongoose.models.User || mongoose.model("User", userSchema);
+const User = mongoose.models.User || mongoose.model("User", userSchema);
 
-export default userModel;
+export default User;
